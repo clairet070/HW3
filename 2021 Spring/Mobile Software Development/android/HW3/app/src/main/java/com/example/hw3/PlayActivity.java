@@ -228,9 +228,11 @@ public class PlayActivity extends AppCompatActivity {
 
                     Thread.sleep(1000);
                     for (int i = 0; i < 3; i++) {
-                        int startTime = (int) (musicService.getDuration() * ((double) values[i + 3] / 100));
+                        int startTime = (int) (musicService.getDuration() * ((double) values[i + 4] / 100));
+                        System.out.println(startTime);
                         if (values[i+1] != -1 && !played[i] && musicService.getPosition() > startTime) {
                             int j = i + 1;
+                            System.out.println("pos: " + musicService.getPosition());
                             System.out.println(values[i+1] + ", " + j);
                             musicService.startMusic(values[i+1], i + 1);
                             played[i] = true;

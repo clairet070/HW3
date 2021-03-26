@@ -1,7 +1,9 @@
 package com.example.hw3;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -63,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
             }
             else if (item.equals("None")){
                 music[1] = -1;
-                bar1.setProgress(0);
             }
         }
 
@@ -87,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
             }
             else if (item.equals("None")){
                 music[2] = -1;
-                bar1.setProgress(0);
             }
         }
 
@@ -111,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
             }
             else if (item.equals("None")){
                 music[3] = -1;
-                bar1.setProgress(0);
             }
         }
 
@@ -193,27 +192,25 @@ public class MainActivity extends AppCompatActivity {
             music = savedInstanceState.getIntArray("music");
             saved();
         }
-
-        try {
-            if (music[0] == -1) {
-                //
+        else {
+            try {
+                if (music[0] == -1) {
+                    //
+                }
+            } catch (Exception e) {
+                music = new int[7];
+                music[0] = 0;
+                for (int i = 1; i < 7; i++) {
+                    music[i] = -1;
+                }
+                in = false;
             }
-        }
-        catch (Exception e) {
-            music = new int[7];
-            music[0] = 0;
-            for (int i = 1; i < 7; i++) {
-                music[i] = -1;
+
+            if (in) {
+                System.out.println("in " + Arrays.toString(music));
+                saved();
+
             }
-            in = false;
-        }
-
-        System.out.println(Arrays.toString(music));
-
-        if (in) {
-            System.out.println("in " + Arrays.toString(music));
-            saved();
-
         }
 
     }

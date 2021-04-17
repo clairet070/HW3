@@ -16,10 +16,12 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [ ] (20pts) Improved the user interface by experimenting with styling and coloring.
 
 ### App Walkthough GIF
-
+https://imgur.com/gallery/aOm7cte link to imgur post. It converts my gifs to mp4s when I upload so
 <img src="https://imgur.com/czEQOHO" width=250><br>
 <img src="https://i.imgur.com/exlFRhp.gif" width=250><br>
 <img src="https://i.imgur.com/GyFBias.gif" width=250><br>
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/ucLIyeN" data-context="false" ><a href="//imgur.com/a/ucLIyeN"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 ### Notes
 Describe any challenges encountered while building the app.
